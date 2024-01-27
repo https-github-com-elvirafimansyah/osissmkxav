@@ -69,7 +69,6 @@ const NavigationBar = () => {
           <Link href="/galeri" className="font-medium  ">Galeri</Link>
           <Link href="/shop" className="font-medium  ">Shop</Link>
           <Link href="/blog" className="font-medium  ">Blog</Link>
-
         </div>
       </div>
     </div>
