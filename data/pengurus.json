@@ -1,4 +1,26 @@
-{
-  "title": "My Title",
-  "content": "Lorem Ipsum"
-}
+[
+  {
+    "id": 1,
+    "name": "Florensia Regitha. A",
+    "role": "Ketua",
+    "profile": "/"
+  },
+  {
+    "id": 2,
+    "name": "Handri",
+    "role": "Wakil Ketua 1",
+    "profile": "/"
+  },
+  {
+    "id": 3,
+    "name": "Yngwie Gracello Winata",
+    "role": "Wakil Ketua 2",
+    "profile": "/"
+  },
+  {
+    "id": 4,
+    "name": "Sandra Cahayanti",
+    "role": "Wakil Ketua 2",
+    "profile": "/"
+  }
+]

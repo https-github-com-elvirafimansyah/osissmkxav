@@ -32,10 +32,12 @@ import { FaChevronDown } from "react-icons/fa";
 
 const NavigationBar = () => {
   const { setTheme } = useTheme()
-  if (window.localStorage.getItem("theme") === undefined) {
-    window.localStorage.setItem("theme", "dark")
+  const isWindowDefined = typeof window !== 'undefined';
+  if (isWindowDefined && window.localStorage.getItem("theme") === undefined) {
+    window.localStorage.setItem("theme", "dark");
   }
-  const [position, setPosition] = React.useState(window.localStorage.getItem("theme"))
+  const storedTheme = isWindowDefined ? window.localStorage.getItem("theme") : "dark";
+  const [position, setPosition] = React.useState<string>(storedTheme || "dark");
 
   return (
     <div>
