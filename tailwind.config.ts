@@ -24,6 +24,7 @@ const config = {
         darkgray_light: "#475569",
         line: "#DFDFDF",
         pastelblue: "#EDF5FF",
+        
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -33,6 +34,10 @@ const config = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        lightbg: {
+          DEFAULT: "hsl(var(--lightbg))",
+          foreground: "hsl(var(--lightbg-foreground))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -41,6 +46,7 @@ const config = {
           DEFAULT: "hsl(var(--destructive))",
           foreground: "hsl(var(--destructive-foreground))",
         },
+
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",

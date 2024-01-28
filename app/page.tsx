@@ -1,8 +1,8 @@
-import HomePage from "./homepage/page";
+import Beranda from "./beranda/page"
 export default function Home() {
   return (
    <>
-      <HomePage />
+      <Beranda />
    </>
   )
 }

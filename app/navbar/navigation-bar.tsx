@@ -1,3 +1,10 @@
+"use client"
+
+import * as React from "react"
+import { FaMoon } from "react-icons/fa6";
+import { IoIosSunny } from "react-icons/io";
+import { useTheme } from "next-themes"
+
 import {
   Sheet,
   SheetContent,
@@ -16,12 +23,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 
-
+import { Button } from "@/components/ui/button"
 import Link from 'next/link'
 import { IoMenu } from "react-icons/io5";
 import { FaChevronDown } from "react-icons/fa";
 
 const NavigationBar = () => {
+  const { setTheme } = useTheme()
+
   return (
     <div>
       <div className="md:hidden">
@@ -53,8 +62,8 @@ const NavigationBar = () => {
         </Sheet>
       </div>
       <div className="hidden md:flex">
-        <div className="flex space-x-7">
-          <Link href="/" className="font-medium  ">Home</Link>
+        <div className="flex items-center space-x-7">
+          <Link href="/" className="font-medium  ">Beranda</Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
             <DropdownMenuContent>
@@ -69,6 +78,26 @@ const NavigationBar = () => {
           <Link href="/galeri" className="font-medium  ">Galeri</Link>
           <Link href="/shop" className="font-medium  ">Shop</Link>
           <Link href="/blog" className="font-medium  ">Blog</Link>
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline" size="icon">
+                <IoIosSunny className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
+                <FaMoon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                <span className="sr-only">Toggle theme</span>
+              </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+              <DropdownMenuItem onClick={() => setTheme("light")}>
+                Light
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("dark")} >
+                Dark
+              </DropdownMenuItem>
+              <DropdownMenuItem onClick={() => setTheme("system")}>
+                System
+              </DropdownMenuItem>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
     </div>
