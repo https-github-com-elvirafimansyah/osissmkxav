@@ -19,24 +19,16 @@ const config = {
     },
     extend: {
       colors: {
-        primaryblue: "#0047FF",
-        lightgray: "#F5F7F8",
-        darkgray_light: "#475569",
-        line: "#DFDFDF",
-        pastelblue: "#EDF5FF",
-        
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        desc: "hsl(var(--desc))",
+        line: "hsl(var(--line))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
-        },
-        lightbg: {
-          DEFAULT: "hsl(var(--lightbg))",
-          foreground: "hsl(var(--lightbg-foreground))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -69,6 +61,9 @@ const config = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        'card': '15px 15px 20px 0px rgba(0, 0, 0, 0.02)',
+      },
       keyframes: {
         "accordion-down": {
           from: { height: "0" },
@@ -83,6 +78,7 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -1,12 +1,15 @@
-import Container from "@/components/container";
 import Home from "./home";
-import TentangKami from './tentang'
+import TentangKami from "./tentang";
+import Sekbid from "./sekbid";
+import PengurusHarian from "./pengurus";
 
 const Beranda = () => {
   return (
     <>
       <Home />
       <TentangKami />
+      <Sekbid />
+      <PengurusHarian />
     </>
   );
 }

@@ -21,6 +21,8 @@ import {
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
 } from "@/components/ui/dropdown-menu"
 
 import { Button } from "@/components/ui/button"
@@ -30,6 +32,7 @@ import { FaChevronDown } from "react-icons/fa";
 
 const NavigationBar = () => {
   const { setTheme } = useTheme()
+  const [position, setPosition] = React.useState("dark")
 
   return (
     <div>
@@ -39,8 +42,8 @@ const NavigationBar = () => {
           <SheetContent>
             <SheetHeader>
               <SheetDescription>
-                <div className="flex flex-col space-y-4 items-start w-full text-lg text-black mt-10">
-                  <Link href="/" className="font-medium  ">Home</Link>
+                <div className="flex flex-col space-y-4 items-start w-full text-lg mt-10 text-foreground">
+                  <Link href="/" className="font-medium  ">Beranda</Link>
                   <DropdownMenu>
                     <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
                     <DropdownMenuContent>
@@ -55,6 +58,22 @@ const NavigationBar = () => {
                   <Link href="/galeri" className="font-medium  ">Galeri</Link>
                   <Link href="/shop" className="font-medium  ">Shop</Link>
                   <Link href="/blog" className="font-medium  ">Blog</Link>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button variant="outline" className="rounded-xl w-10 h-10">
+                        <IoIosSunny className="absolute w-[1rem] h-[1rem] transition-all text-primary rotate-90 scale-100 dark:rotate-0 dark:scale-100" />
+                        <FaMoon className="absolute w-[1rem] h-[1rem] text-primary rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+                        <span className="sr-only">Toggle theme</span>
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end">
+                      <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+                        <DropdownMenuRadioItem value="light" onClick={() => setTheme("light")}>Light</DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="dark" onClick={() => setTheme("dark")}>Dark</DropdownMenuRadioItem>
+                        <DropdownMenuRadioItem value="system" onClick={() => setTheme("system")}>System</DropdownMenuRadioItem>
+                      </DropdownMenuRadioGroup>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </SheetDescription>
             </SheetHeader>
@@ -62,7 +81,7 @@ const NavigationBar = () => {
         </Sheet>
       </div>
       <div className="hidden md:flex">
-        <div className="flex items-center space-x-7">
+        <div className="flex items-center text-foreground space-x-7">
           <Link href="/" className="font-medium  ">Beranda</Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
@@ -79,23 +98,19 @@ const NavigationBar = () => {
           <Link href="/shop" className="font-medium  ">Shop</Link>
           <Link href="/blog" className="font-medium  ">Blog</Link>
           <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline" size="icon">
-                <IoIosSunny className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-                <FaMoon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+            <DropdownMenuTrigger  asChild>
+              <Button variant="outline" className="rounded-xl w-10 h-10">
+                <IoIosSunny className="absolute w-[1rem] h-[1rem] transition-all text-primary rotate-90 scale-100 dark:rotate-0 dark:scale-100" />
+                <FaMoon className="absolute w-[1rem] h-[1rem] text-primary rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
                 <span className="sr-only">Toggle theme</span>
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setTheme("light")}>
-                Light
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("dark")} >
-                Dark
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setTheme("system")}>
-                System
-              </DropdownMenuItem>
+              <DropdownMenuRadioGroup value={position} onValueChange={setPosition}>
+                <DropdownMenuRadioItem value="light" onClick={() => setTheme("light")}>Light</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="dark" onClick={() => setTheme("dark")}>Dark</DropdownMenuRadioItem>
+                <DropdownMenuRadioItem value="system" onClick={() => setTheme("system")}>System</DropdownMenuRadioItem>
+              </DropdownMenuRadioGroup>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
