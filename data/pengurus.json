@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Florensia Regitha. A",
+    "name": "Florensia Regitha A.",
     "role": "Ketua",
     "profile": "/"
   },
@@ -13,14 +13,32 @@
   },
   {
     "id": 3,
-    "name": "Yngwie Gracello Winata",
+    "name": "Yngwie Gracelle W.",
     "role": "Wakil Ketua 2",
     "profile": "/"
   },
   {
     "id": 4,
-    "name": "Sandra Cahayanti",
-    "role": "Wakil Ketua 2",
+    "name": "Sandra Cahyani",
+    "role": "Seketaris",
+    "profile": "/"
+  },
+  {
+    "id": 5,
+    "name": "Nita Nathalia",
+    "role": "Wakil Seketaris",
+    "profile": "/"
+  },
+  {
+    "id": 6,
+    "name": "Melani Arya C.",
+    "role": "Bendahara",
+    "profile": "/"
+  },
+  {
+    "id": 7,
+    "name": "Vivian Renata C.",
+    "role": "Wakil Bendahara",
     "profile": "/"
   }
 ]

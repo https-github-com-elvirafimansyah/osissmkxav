@@ -13,7 +13,7 @@ const Sekbid = () => {
       <section className="py-10 md:py-16 lg:py-20">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-5xl md:text-4xl lg:text-[40px] font-black">Seksi Bidang</h1>
+            <h1 className="text-4xl lg:text-[40px] font-black">Seksi Bidang</h1>
             <p className="text-desc text-base md:text-sm lg:text-base font-medium">Mengenal lebih dalam tentang Seksi Bidang OSIS SMK Xaverius Palembang</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">                       

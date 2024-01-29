@@ -14,6 +14,7 @@ import { Button } from "@/components/ui/button"
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Autoplay from "embla-carousel-autoplay"
 
+
 const Home = () => {
   const sourceImages = [
     {
@@ -27,6 +28,18 @@ const Home = () => {
       width: 100,
       height: 100,
       src: "/assets/logo.png"
+    },
+    {
+      name: "anime",
+      width: 100,
+      height: 100,
+      src: "/assets/anime.jpg"
+    },
+    {
+      name: "rgb",
+      width: 200,
+      height: 200,
+      src: "/assets/rgb.jpg"
     }
   ]
 
@@ -55,13 +68,14 @@ const Home = () => {
           >
             <CarouselContent>
               {sourceImages.map((_, index) => (
-                  <CarouselItem key={index}>
-                    <div className="flex aspect-square items-center justify-center md:p-6">
+                <CarouselItem key={index}>
+                  <div className="flex aspect-square items-center justify-center md:p-6">
                     <Image
                       src={_.src}
                       width={_.width}
                       height={_.height}
                       alt={_.name}
+                      className="rounded-xl"
                     />
                   </div>
                 </CarouselItem>

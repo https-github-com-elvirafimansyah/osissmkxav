@@ -1,6 +1,7 @@
 import Container from "@/components/container";
 import pengurusdata from '../../data/pengurus.json';
 import Image from "next/image";
+
 interface PengurusData {
   id?: number;
   name?: string;
@@ -16,7 +17,7 @@ const PengurusHarian = () => {
       <section className="py-10 md:py-16 lg:py-20">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
-            <h1 className="text-5xl md:text-4xl lg:text-[40px] font-black">Pengurus Harian</h1>
+            <h1 className="text-4xl  lg:text-[40px] font-black">Pengurus Harian</h1>
             <p className="text-desc text-base md:text-sm lg:text-base font-medium">Mengenal lebih dalam tentang Pengurus Harian OSIS/OSISKA SMK Xaverius Palembang</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -34,14 +35,13 @@ const PengurusHarian = () => {
                       />
                     </div>
                     <div>
-                      <h5 className="font-bold text-lg md:text-base lg:text-lg">{user.name}</h5>
-                      <p className="font-medium text-desc">{user.role}</p>
+                      <h5 className="font-bold text-lg md:text-base lg:text-lg capitalize">{user.name}</h5>
+                      <p className="font-medium text-base md:text-sm lg:text-base text-desc capitalize">{user.role}</p>
                     </div>
                   </div>
                 </div>
               </div>
             ))}
-          
           </div>
         </div>
       </section>
