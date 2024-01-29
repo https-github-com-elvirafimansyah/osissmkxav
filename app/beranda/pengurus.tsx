@@ -28,7 +28,7 @@ const PengurusHarian = () => {
                     <div>
                       <Image
                         className="rounded-full w-[58px] h-[58px] object-cover "
-                        src="/assets/osiska.png"
+                        src="/assets/anime.jpg"
                         width={100}
                         height={100}
                         alt="Profile"

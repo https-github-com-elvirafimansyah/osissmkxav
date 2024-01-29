@@ -9,7 +9,7 @@ const Produk = () => {
     <section className="bg-secondary dark:bg-background py-10 md:py-16 lg:py-20">
       <Container>
         <div className="flex justify-between flex-col md:flex-row items-center gap-y-10 md:gap-y-0">
-          <div className="flex pl-5  lg:pl-10  items-center space-x-5  w-full md:w-3/4 lg:w-1/2  ">
+          <div className="flex pl-4  lg:pl-10  items-center space-x-5  w-full md:w-3/4 lg:w-1/2  ">
             <div className="space-y-5 ">
               <Image
                 src="/assets/rgb.jpg"
