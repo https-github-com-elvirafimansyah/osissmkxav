@@ -29,7 +29,7 @@ const Footer = () => {
     },
   ]
   return (
-    <section className="bg-primary dark:bg-background pt-10">
+    <section className="bg-primary dark:bg-background mt-10">
       <Container>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-10">
           <div className="md:flex md:justify-between pb-12 lg:pb-16">
