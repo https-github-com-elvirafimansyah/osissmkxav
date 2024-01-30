@@ -4,16 +4,18 @@ import Sekbid from "./sekbid";
 import PengurusHarian from "./pengurus";
 import Produk from "./produk";
 import BlogTerbaru from "./blogterbaru";
+import Motto from './motto';
 
 const Beranda = () => {
   return (
     <>
       <Home />
       <TentangKami />
-      <Sekbid />
       <PengurusHarian />
+      <Sekbid />
       <Produk />
       <BlogTerbaru />
+      <Motto />
     </>
   );
 }
