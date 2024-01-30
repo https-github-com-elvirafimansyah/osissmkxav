@@ -6,7 +6,7 @@ import { Dot } from 'lucide-react';
 const BlogTerbaru = () => {
   return (
     <Container>
-      <section className="py-10 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
             <h1 className="text-4xl  lg:text-[40px] font-black">Blog Terbaru</h1>
@@ -14,7 +14,7 @@ const BlogTerbaru = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-5 mt-6 ">
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 shadow-card dark:shadow-none">
             <Image  
               src="/assets/upacara.png"
               width={309}
@@ -24,7 +24,7 @@ const BlogTerbaru = () => {
             />
             <div className="space-y-3" >
               <div className="space-y-2">
-                <p className="bg-card dark:bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
+                <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
                 <div className="space-y-1">
                   <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href="/">Upacara Pengibaran Sang Merah Putih Sekaligus Pelantikan Pengurus MPK dan OSIS/OSISKA SMK Xaverius Palembang Masa Bakti 2024.</Link></h2>
                   <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj </p>
@@ -41,7 +41,7 @@ const BlogTerbaru = () => {
 
             
           </div>
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 shadow-card dark:shadow-none">
             <Image
               src="/assets/upacara.png"
               width={309}
@@ -51,7 +51,7 @@ const BlogTerbaru = () => {
             />
             <div className="space-y-3" >
               <div className="space-y-2">
-                <p className="bg-card dark:bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
+                <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
                 <div className="space-y-1">
                   <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href="/">Upacara Pengibaran Sang Merah Putih Sekaligus Pelantikan Pengurus MPK dan OSIS/OSISKA SMK Xaverius Palembang Masa Bakti 2024.</Link></h2>
                   <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj </p>

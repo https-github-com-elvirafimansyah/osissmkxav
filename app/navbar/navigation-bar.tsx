@@ -47,12 +47,11 @@ const NavigationBar = () => {
           <SheetContent>
             <SheetHeader>
               <SheetDescription>
-                <div className="flex flex-col space-y-4 items-start w-full text-lg mt-10 text-foreground">
+                <div className="flex flex-col space-y-7 items-start w-full text-lg mt-10 text-foreground">
                   <Link href="/" className="font-medium  ">Beranda</Link>
                   <DropdownMenu>
                     <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuItem>Tentang</DropdownMenuItem>
                       <DropdownMenuItem>Kata Sambutan</DropdownMenuItem>
                       <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
                       <DropdownMenuItem>MPK</DropdownMenuItem>
@@ -91,9 +90,12 @@ const NavigationBar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
             <DropdownMenuContent>
-              <DropdownMenuItem>Tentang</DropdownMenuItem>
-              <DropdownMenuItem>Kata Sambutan</DropdownMenuItem>
-              <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
+              <Link href="katasambutan">
+                <DropdownMenuItem >Kata Sambutan</DropdownMenuItem>
+              </Link>
+              <Link href="strukturorganisasi">
+                <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>MPK</DropdownMenuItem>
               <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
               <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>

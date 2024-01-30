@@ -14,7 +14,7 @@ const pengurus_data = pengurusdata as PengurusData[]
 const PengurusHarian = () => {
   return ( 
     <Container>
-      <section className="py-10 md:py-16 lg:py-20">
+      <section className="py-12 md:py-16 lg:py-20">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
             <h1 className="text-4xl  lg:text-[40px] font-black">Pengurus Harian</h1>

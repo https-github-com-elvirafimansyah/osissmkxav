@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Logo from "@/app/navbar/logo";
 import { FaInstagram, FaTiktok, FaYoutube, FaFacebook } from "react-icons/fa";
+import { MdOutlineEmail, MdCall } from "react-icons/md";
 
 const Footer = () => {
   const socialmedia = [
@@ -28,11 +29,11 @@ const Footer = () => {
     },
   ]
   return (
-    <section className="bg-primary dark:bg-background">
+    <section className="bg-primary dark:bg-background pt-10">
       <Container>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-10">
           <div className="md:flex md:justify-between pb-12 lg:pb-16">
-            <div className="mb-6 md:mb-0 space-y-2">
+            <div className="mb-6 md:mb-0 space-y-4">
               <Link href="/" className="flex items-center space-x-2">
                 <Image
                   src="/assets/logosmk.png"
@@ -43,6 +44,16 @@ const Footer = () => {
                 <Logo variant="primary" />
               </Link>
               <p className="text-card dark:text-desc text-base md:text-xs lg:text-sm font-medium max-w-xs">SMK Xaverius Palembang terletak di Jl.  Betawi Raya, No. 1707 Telp./Fax. (0711) 824264 Kec. Sematang Borang, Palembang, 30163.</p>
+              <div className="space-y-2">
+                <div className="text-card dark:text-desc flex items-center space-x-3">
+                  <MdOutlineEmail size="22px"/>
+                  <span >smkxaverius@gmail.com</span>
+                </div>
+                <div className="text-card dark:text-desc flex items-center space-x-3">
+                  <MdCall size="22px" />
+                  <span >(0711) 824264</span>
+                </div>
+              </div>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
               <div >
@@ -50,14 +61,6 @@ const Footer = () => {
                   Organisasi
                 </h2>
                 <ul className="text-card dark:text-desc font-medium space-y-4">
-                  <li >
-                    <Link
-                      href="/tentang"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      tentang
-                    </Link>
-                  </li>
                   <li >
                     <Link
                       href="/katasambutan"
@@ -132,11 +135,19 @@ const Footer = () => {
                 </ul>
               </div>
               <div>
-                <h2 className="mb-6 text-sm font-semibold text-white uppercase ">
+                <h2 className="mb-6 text-sm font-semibold text-white uppercase  ">
                   Home
                 </h2>
-                <ul className="text-card dark:text-desc font-medium">
-                  <li className="mb-4">
+                <ul className="text-card dark:text-desc font-medium space-y-4">
+                  <li >
+                    <Link
+                      href="/tentang"
+                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                    >
+                      tentang
+                    </Link>
+                  </li>
+                  <li >
                     <Link href="https://flowbite.com/" className="hover:underline hover:decoration-primary underline-offset-4">
                       Motto
                     </Link>

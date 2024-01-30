@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Kaos Sablon Desain Populer Kekinian",
+    "categori": "kaos",
+    "gambar": "/",
+    "harga": 20000
+  },
+  {
+    "id": 2,
+    "title": "Kaos Sablon Sumpah Pemuda",
+    "categori": "kaos",
+    "gambar": "/",
+    "harga": 28000
+  },
+  {
+    "id": 3,
+    "title": "Kaos Sablon 17 Agustus",
+    "categori": "kaos",
+    "gambar": "/",
+    "harga": 30000
+  }
+]

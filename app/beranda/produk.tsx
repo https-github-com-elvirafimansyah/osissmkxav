@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 const Produk = () => {
   return (
-    <section className="bg-secondary dark:bg-background py-10 md:py-16 lg:py-20">
+    <section className="bg-secondary dark:bg-background py-12 md:py-16 lg:py-20">
       <Container>
         <div className="flex justify-between flex-col md:flex-row items-center gap-y-10 md:gap-y-0">
           <div className="flex pl-4  lg:pl-10  items-center space-x-5  w-full md:w-3/4 lg:w-1/2  ">
@@ -39,7 +39,7 @@ const Produk = () => {
           <div className="flex flex-col space-y-5 md:w-3/4 lg:w-1/2">
             <div className="space-y-3">
               <p className="bg-white dark:bg-card text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">produk kami</p>
-              <h1 className="text-4xl  lg:text-[40px] leading-[3.2rem] font-black">Produk Terbaru dari OSIS/OSISKA SMK Xaverius</h1>
+              <h1 className="text-4xl  lg:text-[40px] leading-[3.1rem] font-black">Produk Terbaru dari OSIS/OSISKA SMK Xaverius</h1>
               <p className="text-desc text-base md:text-sm lg:text-base font-medium">Nikmatilah bermacam-macam produk-produk dari OSIS SMK Xaverius Palembang dengan kualitas yang unggul dan harga yang terjangkau.</p>
             </div>
             <Button variant={"default"} className="w-fit" asChild size={"lg"} >
