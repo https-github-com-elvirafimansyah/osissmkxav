@@ -10,11 +10,6 @@ import {
   Sekbid8, 
   Sekbid9, 
 } from "../app/beranda/icons/SekbidIcons";
-import { 
-  FaRegFlag
-} from "react-icons/fa";
-
-import { FaComputer } from "react-icons/fa6";
 
 
 const SekbidData = [

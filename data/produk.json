@@ -2,22 +2,25 @@
   {
     "id": 1,
     "title": "Kaos Sablon Desain Populer Kekinian",
-    "categori": "kaos",
-    "gambar": "/",
-    "harga": 20000
+    "kategori": "kaos",
+    "gambar": "produk.jpg",
+    "harga": 20000,
+    "link": "https://shopee.co.id/"
   },
   {
     "id": 2,
     "title": "Kaos Sablon Sumpah Pemuda",
-    "categori": "kaos",
-    "gambar": "/",
-    "harga": 28000
+    "kategori": "kaos",
+    "gambar": "produk.jpg",
+    "harga": 28000,
+    "link": "https://shopee.co.id/"
   },
   {
     "id": 3,
     "title": "Kaos Sablon 17 Agustus",
-    "categori": "kaos",
-    "gambar": "/",
-    "harga": 30000
+    "kategori": "kaos",
+    "gambar": "produk.jpg",
+    "harga": 30000,
+    "link": "https://shopee.co.id/"
   }
 ]

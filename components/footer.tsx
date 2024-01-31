@@ -34,12 +34,13 @@ const Footer = () => {
         <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-10">
           <div className="md:flex md:justify-between pb-12 lg:pb-16">
             <div className="mb-6 md:mb-0 space-y-4">
-              <Link href="/" className="flex items-center space-x-2">
+              <Link href="https://smkxaverius.sch.id" target="_blank" className="flex items-center space-x-2">
                 <Image
                   src="/assets/logosmk.png"
-                  width={46}
-                  height={46}
+                  width={200}
+                  height={200}
                   alt="logo"
+                  className="w-[46px] h-[46px] "
                 />
                 <Logo variant="primary" />
               </Link>

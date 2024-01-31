@@ -5,9 +5,8 @@ import Navbar from "./navbar/page";
 import Footer from '@/components/footer';
 import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ['latin'] })
-
 export const metadata: Metadata = {
-  title: 'OSIS SMK Xaverius Palembang',
+  title: `OSIS SMK Xaverius Palembang`,
   description: 'Selamat datang di website resmi OSIS/OSISKA SMK Xaverius Palembang. Website ini berisi informasi tentang OSISKA SMK Xaverius Palembang masa bakti 2024.',
   icons: {
     icon: [

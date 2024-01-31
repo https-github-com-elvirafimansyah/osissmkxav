@@ -9,9 +9,10 @@ const Logo: React.FC<LogoProps> = ({ variant }) => {
     <div className='flex items-center gap-2.5'>
       <Image
         src="/assets/logo.png"
-        width={38}
-        height={38}
+        width={200}
+        height={200}
         alt="logo"
+        className="w-[38px] h-[38px]"
       />
       <div className='flex flex-col mt-1.5'>
         <span className={`text-xs ${variant === "primary" ? "text-white" : "text-foreground"}`}>Organisasi Siswa Intra Sekolah</span>

@@ -14,9 +14,10 @@ const TentangKami = () => {
             <div className="bg-primary px-[70px] py-[65px] border-8 border-white rounded-full outline outline-[10px] outline-offset-1 outline-primary">
               <Image
                 src="/assets/logo.png"
-                width={120}
-                height={120}
+                width={400}
+                height={400}
                 alt="Logo OSIS/OSISKA"
+                className="w-[120px] h-[120px]"
               />
             </div>
           </div>
