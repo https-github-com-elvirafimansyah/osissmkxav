@@ -44,7 +44,7 @@ const Galeri = () => {
           </div>
           <div className="flex flex-col space-y-5 md:w-3/4 lg:w-1/2">
             <div className="space-y-3">
-              <p className="bg-white dark:bg-card text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">galeri</p>
+              <p className="bg-card text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">galeri</p>
               <h1 className="text-4xl  lg:text-[40px] leading-[3.1rem] font-black">Lihat Galeri Dokumentasi Kegiatan SMK Xaverius Palembang</h1>
               <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berbagai galeri foto dokumentasi kegiatan-kegiatan yang ada di SMK Xaverius Palembang</p>
             </div>

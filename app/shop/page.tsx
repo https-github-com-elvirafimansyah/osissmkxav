@@ -24,6 +24,7 @@ const Shop = () => {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState<ProdukData[]>([])
   let isMobile = window.matchMedia("(max-width: 600px)").matches;
+  
   console.log(isMobile)
   const scrollChat = () => {
     if (window.scrollY > 11) {

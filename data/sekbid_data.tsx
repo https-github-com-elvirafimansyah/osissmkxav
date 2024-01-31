@@ -21,9 +21,11 @@ const SekbidData = [
     icon: <Sekbid1 />,
     member: [
       {
+        name: "Meilany",
         img: "/assets/avatar/meilany.jpg",
       },
       {
+        name: "monica",
         img: "/assets/avatar/monica.jpg",
       },
     ]
@@ -36,10 +38,12 @@ const SekbidData = [
     icon: <Sekbid2 />,
     member: [
       {
+        name: "Meilany",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Meilany",
         img: "/assets/avatar/melany.jpg",
 
       },
@@ -54,11 +58,11 @@ const SekbidData = [
     no: 3,
     title: "Wawasan Keilmuan & IPTEK",
     koordinator: "Peter King",
-    profile: "/assets/rgb.jpg",
+    profile: "/assets/avatar/peter.jpg",
     icon: <Sekbid3 />,
     member: [
       {
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/chatherine.jpg",
       },
       {
         img: "/assets/avatar/melany.jpg",
@@ -158,7 +162,7 @@ const SekbidData = [
     no: 8,
     title: "Olahraga & Kesehatan",
     koordinator: "Ryu Fernandez",
-    profile: "/assets/rgb.jpg",
+    profile: "/assets/avatar/ryu.jpg",
     icon: <Sekbid8 />,
     member: [
       {
@@ -175,7 +179,7 @@ const SekbidData = [
     no: 9,
     title: "Lingkungan Hidup",
     koordinator: "Meisy",
-    profile: "/assets/rgb.jpg",
+    profile: "/assets/avatar/meisy.jpg",
     icon: <Sekbid9 />,
     member: [
       {
