@@ -1,10 +1,11 @@
+"use client"
+import { useState, useEffect } from "react";
 import Container from "@/components/container";
 import Image from "next/image";
 import Link from 'next/link';
 import produkdata from '../../data/produk.json';
-
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button"
-
 interface ProdukData {
   id?: number;
   title?: string;
@@ -16,6 +17,22 @@ interface ProdukData {
 const produk_data = produkdata as ProdukData[]
 
 const Shop = () => {
+  const [chat, setChat] = useState(false)
+  const scrollChat = () => {
+    if (window.scrollY > 11) {
+      setChat(true)
+    } else {
+      setChat(false)
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollChat)
+    return () => {
+      window.addEventListener("scroll", scrollChat)
+    }
+  })
+  
   return (
     <Container>
       <section className="py-8 md:py-10 lg:py-12">
@@ -57,6 +74,14 @@ const Shop = () => {
               </div>
           </div>
         </div>
+        <Link
+          href="https://wa.me/62089636406145?text=Selamat pagi/siang/malam, saya ingin mendapatkan informasi lebih lanjut mengenai shop osis smk xaverius?"
+          className={`${chat ? `bg-white text-primary border dark:border-none dark:bg-primary dark:text-primary-foreground` : `bg-primary text-primary-foreground`} rounded-2xl px-5 py-3.5 fixed right-5 bottom-5 md:right-10 md:bottom-10 flex items-center font-medium space-x-2 `}
+          target="_blank"
+        >
+          <FaWhatsapp size="24px"/>
+          <span>Chat Kami</span>
+        </Link>
       </section>
     </Container>
   );
