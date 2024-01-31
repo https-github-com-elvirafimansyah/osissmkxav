@@ -23,8 +23,8 @@ const Shop = () => {
   const [chat, setChat] = useState(false);
   const [input, setInput] = useState('');
   const [output, setOutput] = useState<ProdukData[]>([])
-  const [isMobile, setIsMobile] = useState(false);
-  
+  let isMobile = window.matchMedia("(max-width: 600px)").matches;
+  console.log(isMobile)
   const scrollChat = () => {
     if (window.scrollY > 11) {
       setChat(true)

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "title": "test blog",
+    "category": "kegiatan osis",
+    "subCategory": ["mobile", "web", "tutorial"],
+    "description":
+    "Dengan perkembangan teknologi, semakin banyak bisnis dan individu yang beralih ke platform digital untuk memperluas jangkauan dan meningkatkan keterlibatan pengguna. Salah satu cara efektif untuk mencapai hal ini adalah dengan mengubah situs web Anda menjadi aplikasi mobile. Jika Anda ingin melakukan hal ini tanpa harus menulis kode atau menghabiskan banyak waktu, maka artikel ini dapat menjadi solusi yang tepat untuk mengatasi masalah Anda. ",
+    "subDesc": ["WebIntoApp adalah platform yang memungkinkan Anda mengubah situs web menjadi aplikasi mobile dengan cepat dan mudah. Dengan alat ini, Anda dapat menciptakan pengalaman pengguna yang mirip dengan aplikasi asli tanpa perlu keahlian pengembangan yang mendalam. Berikut adalah panduan langkah demi langkah untuk mengubah situs web Anda menjadi aplikasi menggunakan WebIntoApp."
+    , "Langkah pertama adalah membuka situs https://www.webintoapp.com/ di browser Anda masing-masing. Setelah itu, Anda akan diarahkan ke halaman utama situs tersebut. Pilih tombol “Get Started” untuk masuk ke dashboard website."
+    ],
+    "authorName": "Elvira Firmansyah",
+    "authorAvatar": "/assets/img/profile.png",
+    "createdAt": "Dec 02, 2023",
+    "estimated": "3 min",
+    "cover": "/assets/blog/upacara.png"
+  },
+  {
+    "id": 2,
+    "title": "Siswa SMK Xaverius Palembang melakukan kegiatan jalan santai koordinasi dengan SD dan SMP",
+    "category": "kegiatan osis",
+    "subCategory": ["mobile", "web", "tutorial"],
+    "description":
+    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj  jidajidjadja idjaijdaijdd ...",
+    "subDesc": ["WebIntoApp adalah platform yang memungkinkan Anda mengubah situs web menjadi aplikasi mobile dengan cepat dan mudah. Dengan alat ini, Anda dapat menciptakan pengalaman pengguna yang mirip dengan aplikasi asli tanpa perlu keahlian pengembangan yang mendalam. Berikut adalah panduan langkah demi langkah untuk mengubah situs web Anda menjadi aplikasi menggunakan WebIntoApp."
+    , "Langkah pertama adalah membuka situs https://www.webintoapp.com/ di browser Anda masing-masing. Setelah itu, Anda akan diarahkan ke halaman utama situs tersebut. Pilih tombol “Get Started” untuk masuk ke dashboard website."
+    ],
+    "authorName": "Elvina Firmansyah",
+    "authorAvatar": "/assets/img/profile.png",
+    "createdAt": "Januari 18, 2023",
+    "estimated": "2 min",
+    "cover": "/assets/blog/upacara.png"
+  }
+]

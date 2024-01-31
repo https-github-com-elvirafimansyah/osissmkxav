@@ -22,7 +22,7 @@ const StrukturOrganisasi = () => {
           </div>
           <div className="py-5">
             <Image 
-              src={`/assets/${window.localStorage.getItem("theme")  === "dark" ? "organization_dark.png" : "organization_light.png"}`}
+              src={`/assets/${window.localStorage.getItem("theme")  === "dark" ? "organisasi_dark.png" : "organisasi_light.png"}`}
               width={1000} 
               height={1000}
               alt="stucture"
