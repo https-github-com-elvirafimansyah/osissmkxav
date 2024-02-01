@@ -3,6 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { Dot } from 'lucide-react';
 
+import blogdata from "../../data/blog.json"
+
+interface BlogData {
+  id?: number;
+  title?: string;
+  category?: string;
+  subCategory?: object;
+  description?: string[];
+  subDesc?: object;
+  authorName?: string;
+  authorAvatar?: string;
+  createdAt?: string;
+  estimated?: string;
+  cover?: string;
+}
+
+const blog_data = blogdata as BlogData[]
+
+const linkPath = (path: any) => {
+  return path.replace(/\s+/g, '-');
+}
+
+
 const BlogTerbaru = () => {
   return (
     <Container>
@@ -14,66 +37,36 @@ const BlogTerbaru = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-5 mt-6 ">
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
-            <Image
-              src="/assets/upacara.png"
-              width={309}
-              height={231}
-              alt="upacara"
-              className="w-full md:w-[309px] md:h-[231px] roundede-xl"
-            />
-            <div className="space-y-3" >
-              <div className="space-y-2">
-                <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
-                <div className="space-y-1">
-                  <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href="/">Upacara Pengibaran Sang Merah Putih Sekaligus Pelantikan Pengurus MPK dan OSIS/OSISKA SMK Xaverius Palembang Masa Bakti 2024.</Link></h2>
-                  <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj </p>
-                </div>
-              </div>
-              <div >
-                <div className="md:absolute md:bottom-6 ">
-                  <div className="flex items-center text-sm md:text-base" >
-                    <p>Oleh: <span className="font-semibold">Amelia</span></p>
-                    <Dot />
-                    <p>17 Januari 2024</p>
+          {blog_data.map((_, idx) => (
+            <div key={idx} className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
+              <Image
+                src={_.cover ? _.cover : ''}
+                width={309}
+                height={231}
+                alt="upacara"
+                className="w-full md:w-[309px] md:h-[231px] rounded-xl"
+              />
+              <div className="space-y-3" >
+                <div className="space-y-2">
+                  <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">{_.category}</p>
+                  <div className="space-y-1">
+                    <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href={`/blog/${linkPath(_.title?.toLocaleLowerCase())}`}>{_.title}</Link></h2>
+                    <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">{_.description}</p>
                   </div>
                 </div>
-                <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">3 min read</div>
-              </div>
-            </div>
-
-
-          </div>
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
-            <Image
-              src="/assets/upacara.png"
-              width={309}
-              height={231}
-              alt="upacara"
-              className="w-full md:w-[309px] md:h-[231px] roundede-xl"
-            />
-            <div className="space-y-3" >
-              <div className="space-y-2">
-                <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">kegiatan osis</p>
-                <div className="space-y-1">
-                  <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href="/">Upacara Pengibaran Sang Merah Putih Sekaligus Pelantikan Pengurus MPK dan OSIS/OSISKA SMK Xaverius Palembang Masa Bakti 2024.</Link></h2>
-                  <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj </p>
-                </div>
-              </div>
-              <div >
-                <div className="md:absolute md:bottom-6 ">
-                    <div className="flex items-center text-sm md:text-base" >
-                      <p>Oleh: <span className="font-semibold">Amelia</span></p>
-                      <Dot />
-                      <p>17 Januari 2024</p>
+                <div >
+                  <div className="md:absolute md:bottom-6 ">
+                    <div className="flex flex-col sm:flex-row sm:items-center text-sm md:text-base" >
+                      <p>Oleh: <span className="font-semibold">{_.authorName}</span></p>
+                      <Dot className="hidden sm:block" />
+                      <p>{_.createdAt}</p>
                     </div>
+                  </div>
+                  <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{_.estimated}</div>
                 </div>
-                <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">3 min read</div>
               </div>
             </div>
-
-
-          </div>
+          ))}
         </div>
       </section>
     </Container>

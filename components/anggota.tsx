@@ -12,9 +12,10 @@ interface UserListProps {
   data?: User[];
   title?: string;
   description?: string;
+  type?: string;
 }
 
-const Anggota: React.FC<UserListProps> = ({data, title, description}) => {
+const Anggota: React.FC<UserListProps> = ({data, title, description, type}) => {
   return (
     <Container>
       <section className="py-12 md:py-16 lg:py-20">
@@ -51,5 +52,6 @@ const Anggota: React.FC<UserListProps> = ({data, title, description}) => {
     </Container>
   );
 }
+
 
 export default Anggota;

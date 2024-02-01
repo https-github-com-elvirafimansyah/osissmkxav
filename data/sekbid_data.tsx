@@ -16,6 +16,7 @@ const SekbidData = [
   {
     no: 1,
     title: "Keimanan & Kecintaan terhadap Tuhan Yang Maha Esa",
+    description: "Tentang Keimanan & Kecintaaan terhadap Tuhan Yang Maha Esa",
     koordinator: "Margaretha Cindy",
     profile: "/assets/avatar/cindy.jpg",
     icon: <Sekbid1 />,
@@ -33,6 +34,7 @@ const SekbidData = [
   {
     no: 2,
     title: "Wawasan Kebangsaan dan Nasionalisme",
+    description: "Tentang Wawasan Kebangsaan dan Nasionalisme",
     koordinator: "Tiara Angelica",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid2 />,
@@ -57,6 +59,7 @@ const SekbidData = [
   {
     no: 3,
     title: "Wawasan Keilmuan & IPTEK",
+    description: "Tentang Wawasan Keilmuan & IPTEK",
     koordinator: "Peter King",
     profile: "/assets/avatar/peter.jpg",
     icon: <Sekbid3 />,
@@ -85,6 +88,7 @@ const SekbidData = [
   {
     no: 4,
     title: "Kepribadian, Budi Pekerti, & Kehidupan Berbangsa",
+    description: "Kepribadian, Budi Pekerti, & Kehidupan Berbangsa",
     koordinator: "Unknown",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid4 />,
@@ -101,6 +105,7 @@ const SekbidData = [
   {
     no: 5,
     title: "Keterampilan & Kewirausahaan",
+    description: "Tentang Keterampilan & Kewirausahaan",
     koordinator: "Calista Enggelica",
     profile: "/assets/avatar/calista.jpg",
     icon: <Sekbid5 />,
@@ -125,6 +130,7 @@ const SekbidData = [
   {
     no: 6,
     title: "Kepemimpinan & Demokrasi",
+    description: "Tentang Kepemimpinan & Demokrasi",
     koordinator: "Nova Olivia N.",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid6 />,
@@ -144,6 +150,7 @@ const SekbidData = [
   {
     no: 7,
     title: "Apresiasi Seni Budaya & Daya Kreasi",
+    description: "Tentang Apresiasi Seni Budaya & Daya Kreasi",
     koordinator: "Adinda Putri Kirana",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid7 />,
@@ -163,6 +170,7 @@ const SekbidData = [
   {
     no: 8,
     title: "Olahraga & Kesehatan",
+    description: "Tentang Olahraga & Kesehatan",
     koordinator: "Ryu Fernandez",
     profile: "/assets/avatar/ryu.jpg",
     icon: <Sekbid8 />,
@@ -182,6 +190,7 @@ const SekbidData = [
   {
     no: 9,
     title: "Lingkungan Hidup",
+    description: "Tentang Keimanan & Kecintaaan terhadap Tuhan Yang Maha Esa",
     koordinator: "Meisy Angelina T.",
     profile: "/assets/avatar/meisy.jpg",
     icon: <Sekbid9 />,

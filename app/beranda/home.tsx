@@ -55,7 +55,7 @@ const Home = () => {
                 <Link href="/shop"><MdOutlineShoppingCart size="20px" />&nbsp;Produk Kami</Link>
               </Button>
               <Button variant={"outline"} asChild size={"lg"}>
-                <Link href="/tentang">Tentang Kami</Link>
+                <Link href="#tentang">Tentang Kami</Link>
               </Button>
             </div>
           </div>

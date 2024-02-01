@@ -1,6 +1,6 @@
 import Home from "./home";
 import TentangKami from "./tentang";
-import Sekbid from "./sekbid";
+import Sekbid from "../sekbid/page";
 import PengurusHarian from "./pengurus";
 import Produk from "./produk";
 import BlogTerbaru from "./blogterbaru";

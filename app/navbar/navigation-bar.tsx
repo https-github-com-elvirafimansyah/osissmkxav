@@ -52,11 +52,21 @@ const NavigationBar = () => {
                   <DropdownMenu>
                     <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
                     <DropdownMenuContent>
-                      <DropdownMenuItem>Kata Sambutan</DropdownMenuItem>
-                      <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
-                      <DropdownMenuItem>MPK</DropdownMenuItem>
-                      <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
-                      <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>
+                      <Link href="/katasambutan">
+                        <DropdownMenuItem >Kata Sambutan</DropdownMenuItem>
+                      </Link>
+                      <Link href="/strukturorganisasi">
+                        <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
+                      </Link>
+                      <Link href="/mpk">
+                        <DropdownMenuItem>MPK</DropdownMenuItem>
+                      </Link>
+                      <Link href="/pengurus">
+                        <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
+                      </Link>
+                      <Link href="/sekbid">
+                        <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>
+                      </Link>
                     </DropdownMenuContent>
                   </DropdownMenu>
                   <Link href="/galeri" className="font-medium  ">Galeri</Link>
@@ -99,8 +109,12 @@ const NavigationBar = () => {
               <Link href="/mpk">
                 <DropdownMenuItem>MPK</DropdownMenuItem>
               </Link>
-              <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
-              <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>
+              <Link href="/pengurus">
+                <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
+              </Link>
+              <Link href="/sekbid">
+                <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>
+              </Link>
             </DropdownMenuContent>
           </DropdownMenu>
           <Link href="/galeri" className="font-medium  ">Galeri</Link>

@@ -2,7 +2,7 @@ import Container from "@/components/container";
 import Image from "next/image";
 const TentangKami = () => {
   return ( 
-    <section className="bg-secondary dark:bg-background py-12 md:py-16 lg:py-20">
+    <section id="tentang" className="bg-secondary dark:bg-background py-12 md:py-16 lg:py-20">
       <Container>
         <div className="flex justify-between flex-col md:flex-row items-center gap-y-10 md:gap-y-0">
           <div className="flex flex-col space-y-3 w-full md:w-4/6">

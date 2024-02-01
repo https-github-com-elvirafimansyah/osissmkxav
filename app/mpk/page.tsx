@@ -16,7 +16,7 @@ const MPK = () => {
     <>
       <Container>
         <section className="py-12 md:py-16 lg:py-20">
-          <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2 space-y-4 md:space-y-0">
+          <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2 space-y-5 md:space-y-0">
             <div className="w-full lg:w-1/2 ">
               <div className="space-y-3">
                 <p className="bg-card text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">tentang mpk</p>
