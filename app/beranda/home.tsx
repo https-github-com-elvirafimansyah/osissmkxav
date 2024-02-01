@@ -62,7 +62,7 @@ const Home = () => {
           <Carousel className="w-full sm:max-w-xs md:max-w-sm lg:max-w-lg  "
             plugins={[
               Autoplay({
-                delay: 2000,
+                delay: 3000,
               }),
             ]}
           >

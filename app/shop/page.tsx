@@ -83,7 +83,7 @@ const Shop = () => {
                 <>
                   {output.length >= 1 ? (
                     output.map((hasil, idx) => (
-                      <div className="bg-transparant dark:bg-secondary shadow-card dark:shadow-none rounded-xl border border-1 border-decs relative p-5 " key={idx}>
+                      <div className="bg-transparant dark:bg-secondary  dark:shadow-none rounded-xl border border-1 border-decs relative p-5 " key={idx}>
                         <Image
                           className="rounded-xl w-full h-[240px] object-cover"
                           src={`/assets/produk/${hasil.gambar}`}
@@ -111,7 +111,7 @@ const Shop = () => {
                 </>
             ) : (
                 (produk_data && produk_data.map((produk, idx) => (
-                <div className="bg-transparant dark:bg-secondary shadow-card dark:shadow-none rounded-xl border border-1 border-decs relative p-5 " key={idx}>
+                <div className="bg-transparant dark:bg-secondary  dark:shadow-none rounded-xl border border-1 border-decs relative p-5 " key={idx}>
                   <Image
                     className="rounded-xl w-full h-[240px] object-cover"
                     src={`/assets/produk/${produk.gambar}`}

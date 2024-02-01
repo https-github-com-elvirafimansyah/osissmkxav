@@ -2,17 +2,28 @@
 import React, { useEffect, useState } from "react"
 import Container from "@/components/container";
 import Image from "next/image";
+import { useTheme } from 'next-themes';
 
 const StrukturOrganisasi = () => {
-  const isWindowDefined = typeof window !== 'undefined';
-  if (isWindowDefined && window.localStorage.getItem("theme") === undefined) {
-    window.localStorage.setItem("theme", "dark");
-  }
+  const { theme, setTheme } = useTheme();
+  useEffect(() => {
+    const setTheme = () => {
+      const isWindowDefined = typeof window !== 'undefined';
+      if (isWindowDefined) {
+        const storedTheme = window.localStorage.getItem("theme");
 
-  if (window.localStorage.getItem("theme") === "system") {
-    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
-    window.localStorage.setItem("theme", systemTheme)
-  }
+        if (!storedTheme) {
+          window.localStorage.setItem("theme", "dark");
+        } else if (storedTheme === "system") {
+          const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? "dark" : "light";
+          window.localStorage.setItem("theme", systemTheme);
+        }
+      }
+    };
+
+    setTheme();
+  }, []);
+  
 
   return ( 
     <Container>
@@ -23,7 +34,7 @@ const StrukturOrganisasi = () => {
           </div>
           <div className="py-5">
             <Image 
-              src={`/assets/${window.localStorage.getItem("theme") === "dark" ? "organisasi_dark.png" : "organisasi_light.png"}`}
+              src={`/assets/${theme === 'dark' ? 'organisasi_dark.png' : 'organisasi_light.png'}`}
               width={1000} 
               height={1000}
               alt="stucture"

@@ -9,7 +9,6 @@ import { FC } from "react";
 
 import { Dot } from 'lucide-react';
 
-
 import blogdata from "../../../data/blog.json"
 
 interface BlogData {
@@ -34,28 +33,43 @@ interface detailProps{
 
 
 const BlogDetail: FC<detailProps> = ({params}) => {
-    const linkPath = (path: any) => {
+    const normalPath = (path: any) => {
       return path.replace(/-/g, ' ');
     }
-    const blogdetail = blog_data.find((data) => data.title === linkPath(params.title));
+
+    const stripPath = (path: any) => {
+      return path.replace(/\s+/g, '-');
+    }
+
+
+    const blogdetail = blog_data.find((data) => stripPath(data?.title).toLocaleLowerCase() === params.title);
+    // const isi = blog_data.map((data) => stripPath(data?.title).toLocaleLowerCase());
+
+    // console.log(stripPath(titleStrip).toLocaleLowerCase(), params.title);
+    // console.log(linkPath(params.title));
 
     return (
-    <Container>
+    <Container> 
         <section className="py-8 md:py-10 lg:py-12">
             <div className="flex flex-col space-y-6">
-              <div className="flex flex-col space-y-3">
-                  <div className="flex flex-col space-y-4">
-                  <h1 className="text-4xl lg:text-[40px] font-black">Blog</h1>
-                  <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berikut ini adalah blog OSIS/OSISKA SMK Xaverius 2024</p>
-                  </div>
-                  <div>
-                  <input placeholder="Cari Blog" className="w-full p-3 px-4 rounded-xl bg-transparent dark:bg-secondary border text-decs focus:outline-primary  focus:border-primary focus:ring-primary"
-                  />
-                  </div>
-              </div>
               <div className="flex flex-col space-y-5 mt-6 ">
-                <h1 className="capitalize">{linkPath(params.title)}</h1>
-
+                <p className="bg-pastel text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">{blogdetail?.category}</p>
+                <h1 className="text-2xl lg:text-3xl font-black leading-[3.1rem]">{blogdetail?.title}</h1>
+                <div className="flex items-center text-sm md:text-base" >
+                  <p>Oleh: <span className="font-semibold">{blogdetail?.authorName}</span></p>
+                  <Dot />
+                  <p>{blogdetail?.createdAt}</p>
+                </div>
+                <Image
+                  src={blogdetail?.cover ? blogdetail?.cover : ''}
+                  width={309}
+                  height={231}
+                  alt="upacara"
+                  className="w-full md:w-full md:h-[231px] object-cover rounded-xl"
+                />
+                <div>
+                  <p>{blogdetail?.description}</p>
+                </div>
               </div>
             </div>
         </section>

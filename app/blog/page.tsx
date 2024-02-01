@@ -42,7 +42,7 @@ const Blog = () => {
           </div>
           <div className="flex flex-col space-y-5 mt-6 ">
             {blog_data.map((_, idx) => (
-              <div key={idx} className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 shadow-card dark:shadow-none">
+              <div key={idx} className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
                 <Image
                   src={_.cover ? _.cover : ''}
                   width={309}
@@ -54,7 +54,7 @@ const Blog = () => {
                   <div className="space-y-2">
                     <p className="bg-card text-primary w-fit uppercase py-[9px] px-[18px] text-xs font-bold rounded-full">{_.category}</p>
                     <div className="space-y-1">
-                      <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis capitalize"><Link href={`/blog/${linkPath(_.title?.toLocaleLowerCase())}`}>{_.title}</Link></h2>
+                      <h2 className="text-lg lg:text-xl font-extrabold hover:underline hover:decoration-primary underline-offset-4 line-clamp-2 text-ellipsis "><Link href={`/blog/${linkPath(_.title?.toLocaleLowerCase())}`}>{_.title}</Link></h2>
                       <p className="text-desc line-clamp-3 text-ellipsis text-sm lg:text-base">{_.description}</p>
                     </div>
                   </div>

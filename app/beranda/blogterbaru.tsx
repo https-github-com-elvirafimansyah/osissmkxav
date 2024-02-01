@@ -14,7 +14,7 @@ const BlogTerbaru = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-5 mt-6 ">
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 shadow-card dark:shadow-none">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
             <Image
               src="/assets/upacara.png"
               width={309}
@@ -44,7 +44,7 @@ const BlogTerbaru = () => {
 
 
           </div>
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0 shadow-card dark:shadow-none">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
             <Image
               src="/assets/upacara.png"
               width={309}

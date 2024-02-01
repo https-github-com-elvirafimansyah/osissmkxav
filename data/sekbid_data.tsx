@@ -21,11 +21,11 @@ const SekbidData = [
     icon: <Sekbid1 />,
     member: [
       {
-        name: "Meilany",
+        name: "Meilany Arya C",
         img: "/assets/avatar/meilany.jpg",
       },
       {
-        name: "monica",
+        name: "Monica Herlianti",
         img: "/assets/avatar/monica.jpg",
       },
     ]
@@ -38,7 +38,7 @@ const SekbidData = [
     icon: <Sekbid2 />,
     member: [
       {
-        name: "Meilany",
+        name: "Jessen",
         img: "/assets/avatar/melany.jpg",
 
       },
@@ -62,17 +62,21 @@ const SekbidData = [
     icon: <Sekbid3 />,
     member: [
       {
+        name: "Chaterine Aliensky",
         img: "/assets/avatar/chatherine.jpg",
       },
       {
+        name: "Owen Tandoballa Tan",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Elvina Firmansyah",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Elvira Firmansyah",
         img: "/assets/avatar/melany.jpg",
 
       }
@@ -97,41 +101,41 @@ const SekbidData = [
   {
     no: 5,
     title: "Keterampilan & Kewirausahaan",
-    koordinator: "Unknown",
-    profile: "/assets/rgb.jpg",
+    koordinator: "Calista Enggelica",
+    profile: "/assets/avatar/calista.jpg",
     icon: <Sekbid5 />,
     member: [
       {
+        name: "anastasya",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "anastasya",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "anastasya",
         img: "/assets/avatar/melany.jpg",
 
       },
-
     ]
   },
   {
     no: 6,
     title: "Kepemimpinan & Demokrasi",
-    koordinator: "Unknown",
+    koordinator: "Nova Olivia N.",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid6 />,
     member: [
       {
+        name: "Nikolas Saputra",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
-        img: "/assets/avatar/melany.jpg",
-
-      },
-      {
+        name: "Amelia",
         img: "/assets/avatar/melany.jpg",
 
       },
@@ -140,22 +144,20 @@ const SekbidData = [
   {
     no: 7,
     title: "Apresiasi Seni Budaya & Daya Kreasi",
-    koordinator: "Unknown",
+    koordinator: "Adinda Putri Kirana",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid7 />,
     member: [
       {
+        name: "Darlene Olviia Yohan",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Viona Situmorang",
         img: "/assets/avatar/melany.jpg",
 
-      },
-      {
-        img: "/assets/avatar/melany.jpg",
-
-      },
+      }
     ]
   },
   {
@@ -166,10 +168,12 @@ const SekbidData = [
     icon: <Sekbid8 />,
     member: [
       {
+        name: "David Alexander",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Dennis Pebrian",
         img: "/assets/avatar/melany.jpg",
 
       },
@@ -178,22 +182,20 @@ const SekbidData = [
   {
     no: 9,
     title: "Lingkungan Hidup",
-    koordinator: "Meisy",
+    koordinator: "Meisy Angelina T.",
     profile: "/assets/avatar/meisy.jpg",
     icon: <Sekbid9 />,
     member: [
       {
+        name: "Juanesya Clementine S.",
         img: "/assets/avatar/melany.jpg",
 
       },
       {
+        name: "Deviana",
         img: "/assets/avatar/melany.jpg",
 
-      },
-      {
-        img: "/assets/avatar/melany.jpg",
-
-      },
+      }
     ]
   },
 ]

@@ -14,7 +14,7 @@ const Sekbid = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {SekbidData.map((_, idx) => (
-              <div key={idx} className="md:h-[300px] bg-transparant dark:bg-secondary shadow-card dark:shadow-none rounded-xl border border-1 border-decs relative ">
+              <div key={idx} className="md:h-[300px] bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs relative ">
                 <div className="">
                   <div className="p-6 flex flex-col space-y-5">
                     <div className="bg-primary w-fit p-4 rounded-xl text-white">

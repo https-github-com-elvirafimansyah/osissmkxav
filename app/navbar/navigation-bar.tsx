@@ -90,13 +90,15 @@ const NavigationBar = () => {
           <DropdownMenu>
             <DropdownMenuTrigger className="font-medium flex items-center gap-2">Organisasi <FaChevronDown /></DropdownMenuTrigger>
             <DropdownMenuContent>
-              <Link href="katasambutan">
+              <Link href="/katasambutan">
                 <DropdownMenuItem >Kata Sambutan</DropdownMenuItem>
               </Link>
-              <Link href="strukturorganisasi">
+              <Link href="/strukturorganisasi">
                 <DropdownMenuItem>Struktur Organisasi</DropdownMenuItem>
               </Link>
-              <DropdownMenuItem>MPK</DropdownMenuItem>
+              <Link href="/mpk">
+                <DropdownMenuItem>MPK</DropdownMenuItem>
+              </Link>
               <DropdownMenuItem>Pengurus Harian</DropdownMenuItem>
               <DropdownMenuItem>Seksi Bidang</DropdownMenuItem>
             </DropdownMenuContent>
