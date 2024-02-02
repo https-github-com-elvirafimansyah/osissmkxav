@@ -15,7 +15,7 @@ const MPK = () => {
   return (
     <>
       <Container>
-        <section className="py-12 md:py-16 lg:py-20">
+        <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
           <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2 space-y-5 md:space-y-0">
             <div className="w-full lg:w-1/2 ">
               <div className="space-y-3">
@@ -40,6 +40,7 @@ const MPK = () => {
         description="Mengenal lebih dalam tentang anggota MPK SMK Xaverius Palembang"
         data={MPK_data}
         type="normal"
+        bg="secondary"
       />
     </>
   );

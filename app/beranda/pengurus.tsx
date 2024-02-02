@@ -18,6 +18,7 @@ const PengurusHarian = () => {
       description="Mengenal lebih dalam tentang Pengurus Harian OSIS/OSISKA SMK Xaverius Palembang"
       data={pengurus_data}
       type="normal"
+      bg="normal"
     />
   );
 }

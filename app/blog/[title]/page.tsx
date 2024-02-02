@@ -36,6 +36,17 @@ const BlogDetail: FC<detailProps> = ({ params }) => {
     return path.replace(/\s+/g, '-');
   }
 
+  const convertTanggal = (tanggal: string) => {
+    const date = tanggal.split(", ");
+    const dateObject = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
+
+    const day = dateObject.toLocaleString('id-ID', { day: 'numeric' });
+    const month = dateObject.toLocaleString('id-ID', { month: 'long' });
+    const year = dateObject.getFullYear();
+    const fullDate = `${day} ${month} ${year}`;
+    
+    return fullDate;
+  }
 
   const blogdetail = blog_data.find((data) => stripPath(data?.title).toLocaleLowerCase() === params.title);
 
@@ -45,11 +56,11 @@ const BlogDetail: FC<detailProps> = ({ params }) => {
         <div className="flex flex-col space-y-6">
           <div className="flex flex-col space-y-5 mt-6 ">
             <p className="bg-pastel text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">{blogdetail?.category}</p>
-            <h1 className="text-2xl lg:text-3xl font-black leading-[3.1rem]">{blogdetail?.title}</h1>
+            <h1 className="text-2xl lg:text-3xl font-black md:leading-[3.1rem]">{blogdetail?.title}</h1>
             <div className="flex items-center text-sm md:text-base" >
               <p>Oleh: <span className="font-semibold">{blogdetail?.authorName}</span></p>
               <Dot />
-              <p>{blogdetail?.createdAt}</p>
+              <p>{blogdetail?.createdAt ? convertTanggal(blogdetail?.createdAt) : ''}</p>
             </div>
             <Image
               src={blogdetail?.cover ? blogdetail?.cover : ''}

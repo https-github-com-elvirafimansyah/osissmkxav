@@ -4,16 +4,16 @@ import Image from "next/image";
 import SekbidData from "../../../data/sekbid_data";
 import Link from "next/link";
 import Anggota from "@/components/anggota";
+
 interface detailProps {
   params: { no: string };
 }
 const SekbidDetail: React.FC<detailProps> = ({ params }) => {
-  const sekbid_detail= SekbidData.find((data) => data?.no.toString() === params.no);
-
+  const sekbid_detail = SekbidData.find((data) => data?.no.toString() === params.no);
   return (
     <>
       <Container>
-        <section className="py-12 md:py-16 lg:py-20">
+        <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
           <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2 space-y-5 md:space-y-0">
             <div className="w-full lg:w-1/2 ">
               <div className="space-y-3">
@@ -33,10 +33,11 @@ const SekbidDetail: React.FC<detailProps> = ({ params }) => {
           </div>
         </section>
       </Container>
-      <Anggota 
+      <Anggota
         title="Anggota"
         description="Mengenal lebih dalam tentang Koordinator dan Anggota Seksi Bidang 1 OSIS/OSISKA SMK Xaverius Palembang"
         type="3"
+        data3={sekbid_detail}
       />
     </>
   );

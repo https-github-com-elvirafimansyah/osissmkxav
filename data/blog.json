@@ -8,7 +8,7 @@
     "Dengan perkembangan teknologi, semakin banyak bisnis dan individu yang beralih ke platform digital untuk memperluas jangkauan dan meningkatkan keterlibatan pengguna. "],
     "authorName": "Stella",
     "authorAvatar": "/assets/img/profile.png",
-    "createdAt": "2 Desember 2023",
+    "createdAt": "2023, 12, 7",
     "estimated": "3 min",
     "cover": "/assets/blog/upacara.jpg"
   },
@@ -23,8 +23,23 @@
     
     "authorName": "Elvina Firmansyah",
     "authorAvatar": "/assets/img/profile.png",
-    "createdAt": "18 Januari 2024",
+    "createdAt": "2024, 1, 18",
     "estimated": "2 min",
+    "cover": "/assets/blog/upacara.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Test Blog 3",
+    "category": "Kunjungan Museum",
+    "subCategory": ["mobile", "web", "tutorial"],
+    "description": [
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book jdada dadadaidiwjdiwj  jidajidjadja idjaijdaijdd"
+    ],
+    
+    "authorName": "Leonetta Pinkan",
+    "authorAvatar": "/assets/img/profile.png",
+    "createdAt": "2022, 5, 3",
+    "estimated": "5 min",
     "cover": "/assets/blog/upacara.jpg"
   }
 ]

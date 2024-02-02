@@ -32,6 +32,17 @@ const Blog = () => {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState<BlogData[]>([])
 
+
+  const tanggalSort = (tanggal: string): Date => {
+    const date = tanggal.split(", ");
+    const dateObject = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
+  
+    return dateObject;
+  };
+  
+  const sortedData: BlogData[] = blog_data.sort((a, b) => tanggalSort(b.createdAt ? b.createdAt : '').getTime() - tanggalSort(a.createdAt ? a.createdAt : '').getTime());
+
+
   const filterData = (searchValue: string): void => {
     setInput(searchValue);
 
@@ -44,10 +55,21 @@ const Blog = () => {
 
     setOutput(filteredData);
   };
-
-
-  console.log(blog_data[0])
   
+
+  const convertTanggal = (tanggal: string) => {
+    const date = tanggal.split(", ");
+    const dateObject = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
+
+    const day = dateObject.toLocaleString('id-ID', { day: 'numeric' });
+    const month = dateObject.toLocaleString('id-ID', { month: 'long' });
+    const year = dateObject.getFullYear();
+    const fullDate = `${day} ${month} ${year}`;
+    
+    return fullDate;
+  }
+  
+
   return (
     <Container>
       <section className="py-8 md:py-10 lg:py-12">
@@ -89,7 +111,7 @@ const Blog = () => {
                           <div className="flex items-center text-sm md:text-base" >
                             <p>Oleh: <span className="font-semibold">{hasil.authorName}</span></p>
                             <Dot />
-                            <p>{hasil.createdAt}</p>
+                            <p>{hasil.createdAt ? convertTanggal(hasil.createdAt) : ''}</p>
                           </div>
                         </div>
                         <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{hasil.estimated}</div>
@@ -102,7 +124,7 @@ const Blog = () => {
               )}
             </>
             ) : (
-              (blog_data.map((_, idx) => (
+              (sortedData.map((_, idx) => (
                 <div key={idx} className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
                   <Image
                     src={_.cover ? _.cover : ''}
@@ -124,7 +146,7 @@ const Blog = () => {
                         <div className="flex flex-col sm:flex-row sm:items-center text-sm md:text-base" >
                           <p>Oleh: <span className="font-semibold">{_.authorName}</span></p>
                           <Dot className="hidden sm:block" />
-                          <p>{_.createdAt}</p>
+                          <p>{_.createdAt ? convertTanggal(_.createdAt) : ''}</p>
                         </div>
                       </div>
                       <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{_.estimated}</div>
@@ -133,7 +155,6 @@ const Blog = () => {
                 </div>
               )))
             )}
-            
 
           </div>
         </div>

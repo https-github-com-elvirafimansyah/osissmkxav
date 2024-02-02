@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react"
 
 const Produk = () => {
   return (
-    <section className="bg-secondary dark:bg-background py-12 md:py-16 lg:py-20">
+    <section className="bg-secondary dark:bg-background pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
       <Container>
         <div className="flex justify-between flex-col md:flex-row items-center gap-y-10 md:gap-y-0">
           <div className="flex pl-4  lg:pl-10  items-center space-x-5  w-full md:w-3/4 lg:w-1/2  ">

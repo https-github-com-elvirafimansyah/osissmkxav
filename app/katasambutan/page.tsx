@@ -4,11 +4,11 @@ import Image from "next/image";
 const KataSambutan = () => {
   return ( 
     <Container>
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
         <div className="flex justify-between flex-col md:flex-row gap-y-10 md:gap-y-0" >
           <div className="flex pl-6 md:pl-10 lg:pl-16  items-center space-x-5  w-full md:w-3/4 lg:w-1/2  ">
             <Image
-              src="/assets/avatar/florensia.png"
+              src="/assets/ketua.png"
               width={500}
               height={500}
               alt="Logo OSIS/OSISKA"
@@ -30,11 +30,11 @@ const KataSambutan = () => {
                   <span>Kami OSIS SMK Xaverius Palembang masa bakti 2024 yang beranggotakan 40 orang diketuai oleh Febri Florensia Regitha ApriliantyLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span>                
                 </p>
               </div>
-              <div className="flex space-x-2">
+              <div className="flex space-x-3">
                 <div>
                   <Image
                     className="rounded-full w-[45px] h-[45px] object-cover border-2 border-decs"
-                    src={'/assets/avatar/melany.jpg'}
+                    src={'/assets/avatar/florensia.jpg'}
                     width={100}
                     height={95}
                     alt="Profile"

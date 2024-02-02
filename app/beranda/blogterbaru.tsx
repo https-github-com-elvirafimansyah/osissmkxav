@@ -1,6 +1,8 @@
 import Container from "@/components/container";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react"
 import { Dot } from 'lucide-react';
 
 import blogdata from "../../data/blog.json"
@@ -25,14 +27,35 @@ const linkPath = (path: any) => {
   return path.replace(/\s+/g, '-');
 }
 
-const blog_1 = blog_data[0];
-const blog_2 = blog_data[1];
+const tanggalSort = (tanggal: string): Date => {
+  const date = tanggal.split(", ");
+  const dateObject = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
 
+  return dateObject;
+};
+
+const convertTanggal = (tanggal: string) => {
+  const date = tanggal.split(", ");
+  const dateObject = new Date(parseInt(date[0]), parseInt(date[1]) - 1, parseInt(date[2]));
+
+  const day = dateObject.toLocaleString('id-ID', { day: 'numeric' });
+  const month = dateObject.toLocaleString('id-ID', { month: 'long' });
+  const year = dateObject.getFullYear();
+  const fullDate = `${day} ${month} ${year}`;
+  
+  return fullDate;
+}
+
+const sortedData: BlogData[] = blog_data.sort((a, b) => tanggalSort(b.createdAt ? b.createdAt : '').getTime() - tanggalSort(a.createdAt ? a.createdAt : '').getTime());
+
+const blog_1 = sortedData[0];
+const blog_2 = sortedData[1];
 
 const BlogTerbaru = () => {
+
   return (
     <Container>
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
         <div className="flex flex-col space-y-5">
           <div className="flex flex-col space-y-2">
             <h1 className="text-4xl  lg:text-[40px] font-black">Blog Terbaru</h1>
@@ -40,7 +63,7 @@ const BlogTerbaru = () => {
           </div>
         </div>
         <div className="flex flex-col space-y-5 mt-6 ">
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  ">
             <Image
               src={blog_1.cover ? blog_1.cover : ''}
               width={309}
@@ -61,14 +84,14 @@ const BlogTerbaru = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center text-sm md:text-base" >
                     <p>Oleh: <span className="font-semibold">{blog_1.authorName}</span></p>
                     <Dot className="hidden sm:block" />
-                    <p>{blog_1.createdAt}</p>
+                    <p>{blog_1.createdAt ? convertTanggal(blog_1.createdAt) : ''}</p>
                   </div>
                 </div>
                 <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{blog_1.estimated}</div>
               </div>
             </div>
           </div>
-          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  dark:shadow-none">
+          <div className="border bg-transparant dark:bg-secondary flex flex-col md:flex-row md:space-x-5 p-5 md:p-6 rounded-xl relative space-y-4 md:space-y-0  ">
             <Image
               src={blog_2.cover ? blog_2.cover : ''}
               width={309}
@@ -89,7 +112,7 @@ const BlogTerbaru = () => {
                   <div className="flex flex-col sm:flex-row sm:items-center text-sm md:text-base" >
                     <p>Oleh: <span className="font-semibold">{blog_2.authorName}</span></p>
                     <Dot className="hidden sm:block" />
-                    <p>{blog_2.createdAt}</p>
+                    <p>{blog_2.createdAt ? convertTanggal(blog_2.createdAt) : ''}</p>
                   </div>
                 </div>
                 <div className="absolute text-xs md:text-sm right-6 bottom-6 text-desc">{blog_2.estimated}</div>
@@ -97,13 +120,12 @@ const BlogTerbaru = () => {
             </div>
           </div>
         </div>
-        <Link
-          href="/blog"
-          className="bg-white text-primary border dark:border-none dark:bg-primary dark:text-primary-foreground"
-          target="_blank"
-        >
-          <span className="hidden md:block">Chat Kami</span>
-        </Link>
+        <Button variant={"default"} className="w-fit float-right mt-5" asChild size={"lg"} >
+          <Link href="/blog" className="flex space-x-1">
+            <span>Selanjutnya</span>
+            <ArrowRight className="w-5 h-5 "/>
+          </Link>
+        </Button>
       </section>
     </Container>
 

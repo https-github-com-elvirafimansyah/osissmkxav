@@ -4,7 +4,7 @@ import Image from "next/image";
 const Motto = () => {
   return (
     <Container>
-      <section className="py-12 md:py-16 lg:py-20">
+      <section className="pt-12 pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
         <div className="rounded-xl border border-1 border-decs p-10 md:p-16">
           <div className="flex justify-center items-center flex-col space-y-4">
             <p className="bg-pastel text-primary w-fit uppercase py-[11px] px-[20px] text-sm font-semibold rounded-full">motto</p>

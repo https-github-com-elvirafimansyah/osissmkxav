@@ -29,9 +29,9 @@ const Footer = () => {
     },
   ]
   return (
-    <section className="bg-primary dark:bg-background mt-10">
+    <section className="bg-primary dark:bg-background">
       <Container>
-        <div className="mx-auto w-full max-w-screen-xl p-4 py-8 lg:py-10">
+        <div className="mx-auto w-full max-w-screen-xl py-8 lg:py-10 ">
           <div className="md:flex md:justify-between pb-12 lg:pb-16">
             <div className="mb-6 md:mb-0 space-y-4">
               <Link href="https://smkxaverius.sch.id" target="_blank" className="flex items-center space-x-2">
@@ -56,7 +56,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-8 sm:gap-16 sm:grid-cols-3">
+            <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
               <div >
                 <h2 className="mb-6 text-sm font-semibold text-white uppercase">
                   Organisasi
@@ -80,7 +80,7 @@ const Footer = () => {
                   </li>
                   <li >
                     <Link
-                      href="/sekbid"
+                      href="/mpk"
                       className="hover:underline hover:decoration-primary underline-offset-4 uppercase"
                     >
                       mpk
