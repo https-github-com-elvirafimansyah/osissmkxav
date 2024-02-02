@@ -39,6 +39,7 @@ const MPK = () => {
         title="Anggota MPK"
         description="Mengenal lebih dalam tentang anggota MPK SMK Xaverius Palembang"
         data={MPK_data}
+        type="normal"
       />
     </>
   );

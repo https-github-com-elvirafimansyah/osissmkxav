@@ -1,4 +1,3 @@
-
 import {
   Sekbid1,
   Sekbid2,
@@ -41,16 +40,16 @@ const SekbidData = [
     member: [
       {
         name: "Jessen",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Meilany",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
 
@@ -70,17 +69,17 @@ const SekbidData = [
       },
       {
         name: "Owen Tandoballa Tan",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Elvina Firmansyah",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Elvira Firmansyah",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       }
     ]
@@ -94,11 +93,11 @@ const SekbidData = [
     icon: <Sekbid4 />,
     member: [
       {
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
       },
     ]
   },
@@ -112,17 +111,17 @@ const SekbidData = [
     member: [
       {
         name: "anastasya",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "anastasya",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "anastasya",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
     ]
@@ -137,12 +136,12 @@ const SekbidData = [
     member: [
       {
         name: "Nikolas Saputra",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Amelia",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
     ]
@@ -157,12 +156,12 @@ const SekbidData = [
     member: [
       {
         name: "Darlene Olviia Yohan",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Viona Situmorang",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       }
     ]
@@ -177,12 +176,12 @@ const SekbidData = [
     member: [
       {
         name: "David Alexander",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Dennis Pebrian",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
     ]
@@ -197,12 +196,12 @@ const SekbidData = [
     member: [
       {
         name: "Juanesya Clementine S.",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       },
       {
         name: "Deviana",
-        img: "/assets/avatar/melany.jpg",
+        img: "/assets/avatar/meilany.jpg",
 
       }
     ]
