@@ -14,7 +14,6 @@ import { Button } from "@/components/ui/button"
 import { MdOutlineShoppingCart } from "react-icons/md";
 import Autoplay from "embla-carousel-autoplay"
 
-
 const Home = () => {
   const sourceImages = [
     {
@@ -46,9 +45,9 @@ const Home = () => {
   return ( 
     <Container>
       <section className="py-10 md:py-10 lg:py-10 overflow-hidden">
-        <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2 space-y-4 md:space-y-0">
+        <div className="flex flex-col md:flex-row md:items-center justify-between md:space-x-2  md:space-y-0">
           <div className="md:w-3/4 lg:w-1/2 space-y-3">
-            <h1 className="font-black text-4xl md:text-4xl lg:text-5xl ">OSIS SMK Xaverius Palembang</h1>
+            <h1 className="font-black text-4xl  lg:text-5xl ">OSIS SMK Xaverius Palembang</h1>
             <p className="text-desc text-base md:text-sm lg:text-base font-medium">Selamat datang di website resmi OSIS/OSISKA SMK Xaverius Palembang. Website ini berisi informasi tentang OSISKA SMK  Xaverius Palembang masa bakti 2024.</p>
             <div className="flex space-x-3 pt-3">
               <Button variant={"default"} asChild size={"lg"}>

@@ -36,7 +36,10 @@ const Shop = () => {
   const filterData = (searchValue: string): void => {
     setInput(searchValue);
     const filteredData: ProdukData[] = produk_data.filter((produk) => {
-      return Object.values(produk).join('').toLowerCase().includes(searchValue.toLowerCase());
+      const titleMatch = typeof produk.title === 'string' && produk.title.toLowerCase().includes(searchValue.toLowerCase());
+      const kategoriMatch = typeof produk.kategori === 'string' && produk.kategori.toLowerCase().includes(searchValue.toLowerCase());
+
+      return titleMatch || kategoriMatch;
     });
     setOutput(filteredData);
   }
@@ -62,13 +65,13 @@ const Shop = () => {
     <Container>
       <section className="py-8 md:py-10 lg:py-12">
         <div className="flex flex-col space-y-6">
-          <div className="flex flex-col space-y-3">
-            <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-2">
               <h1 className="text-4xl lg:text-[40px] font-black">Jelajahi Produk Kami</h1>
               <p className="text-desc text-base md:text-sm lg:text-base font-medium">Produk-produk berkualitas dari OSIS/OSISKA SMK Xaverius Palembang</p>
             </div>
             <div>
-              <input placeholder="Cari berdasarkan kategori" className="w-full p-3 px-3.5 rounded-xl bg-transparent dark:bg-secondary border text-decs focus:outline-primary focus:border-primary focus:ring-primary"
+              <input placeholder="Cari Produk" className="w-full p-3 px-3.5 rounded-xl bg-transparent dark:bg-secondary border text-decs focus:outline-primary focus:border-primary focus:ring-primary"
                 onChange={(e) => filterData(e.target.value)}
               />
             </div>

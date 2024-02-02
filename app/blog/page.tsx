@@ -74,8 +74,8 @@ const Blog = () => {
     <Container>
       <section className="py-8 md:py-10 lg:py-12">
         <div className="flex flex-col space-y-6">
-          <div className="flex flex-col space-y-3">
-            <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-5">
+            <div className="flex flex-col space-y-2">
               <h1 className="text-4xl lg:text-[40px] font-black">Blog</h1>
               <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berikut ini adalah blog OSIS/OSISKA SMK Xaverius 2024</p>
             </div>

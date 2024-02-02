@@ -42,7 +42,7 @@ const convertTanggal = (tanggal: string) => {
   const month = dateObject.toLocaleString('id-ID', { month: 'long' });
   const year = dateObject.getFullYear();
   const fullDate = `${day} ${month} ${year}`;
-  
+
   return fullDate;
 }
 
@@ -122,8 +122,8 @@ const BlogTerbaru = () => {
         </div>
         <Button variant={"default"} className="w-fit float-right mt-5" asChild size={"lg"} >
           <Link href="/blog" className="flex space-x-1">
-            <span>Selanjutnya</span>
-            <ArrowRight className="w-5 h-5 "/>
+            <span className="capitalize">selengkapnya</span>
+            <ArrowRight className="w-5 h-5 " />
           </Link>
         </Button>
       </section>

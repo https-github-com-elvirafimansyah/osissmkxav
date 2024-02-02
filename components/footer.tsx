@@ -171,7 +171,7 @@ const Footer = () => {
             </span>
             <div className="flex mt-4 sm:justify-center sm:mt-0 space-x-4">
               {socialmedia.map((_, idx) => (
-                <Link key={idx} href={_.link} target="_blank" className="text-card dark:text-desc hover:text-primary ">
+                <Link key={idx} href={_.link} target="_blank" className="text-card dark:text-desc hover:text-white dark:hover:text-primary ">
                     {_.icon}
                 </Link>
               ))}
