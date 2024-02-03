@@ -24,12 +24,23 @@ const Shop = () => {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState<ProdukData[]>([])
   let isMobile = window.matchMedia("(max-width: 600px)").matches;
+  const threshold = isMobile ? 11 : 20;
+
   
+  console.log(isMobile)
   const scrollChat = () => {
-    if (window.scrollY > 11) {
-      setChat(true)
+    if (isMobile && window.innerWidth <= 400) {
+      if (window.scrollY > 20) {
+        setChat(true);
+      } else {
+        setChat(false);
+      }
     } else {
-      setChat(false)
+      if (window.scrollY > threshold) {
+        setChat(true);
+      } else {
+        setChat(false);
+      }
     }
   }
 

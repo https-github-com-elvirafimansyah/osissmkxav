@@ -28,8 +28,16 @@ const Footer = () => {
       link: "https://www.tiktok.com/@osiska_smkxaverius",
     },
   ]
+
+  const currentYear = () => {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+
+    return year;
+  }
+  
   return (
-    <section className="bg-primary dark:bg-background">
+    <section className="bg-primary dark:bg-background" id="footer">
       <Container>
         <div className="mx-auto w-full max-w-screen-xl py-8 lg:py-10 ">
           <div className="md:flex md:justify-between pb-12 lg:pb-16">
@@ -57,105 +65,110 @@ const Footer = () => {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-8 sm:gap-10 sm:grid-cols-3">
-              <div >
-                <h2 className="mb-6 text-sm font-semibold text-white uppercase">
-                  Organisasi
-                </h2>
-                <ul className="text-card dark:text-desc font-medium space-y-4">
-                  <li >
-                    <Link
-                      href="/katasambutan"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      kata sambutan
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/strukturorganisasi"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      struktur organisasi
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/mpk"
-                      className="hover:underline hover:decoration-primary underline-offset-4 uppercase"
-                    >
-                      mpk
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/pengurusharian"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      pengurus harian
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/sekbid"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      seksi bidang
-                    </Link>
-                  </li>
-                </ul>
+              <div className="flex flex-col md:items-center">
+                <div className="">
+                  <h2 className="mb-6 text-sm font-semibold text-white uppercase  ">
+                    Home
+                  </h2>
+                  <ul className="text-card dark:text-desc font-medium space-y-4">
+                    <li >
+                      <Link
+                        href="/tentang"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        tentang
+                      </Link>
+                    </li>
+                    <li >
+                      <Link href="/motto" className="hover:underline hover:decoration-primary underline-offset-4">
+                        Motto
+                      </Link>
+                    </li> 
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
-                  lainnya
-                </h2>
-                <ul className="text-card dark:text-desc font-medium space-y-4">
-                  <li >
-                    <Link
-                      href="/arsip"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      arsip
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/blog"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      blog
-                    </Link>
-                  </li>
-                  <li >
-                    <Link
-                      href="/shop"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      shop
-                    </Link>
-                  </li>
-                </ul>
+              <div className="flex flex-col md:items-center">
+                <div className="">
+                  <h2 className="mb-6 text-sm font-semibold text-white uppercase">
+                    Organisasi
+                  </h2>
+                  <ul className="text-card dark:text-desc font-medium space-y-4">
+                    <li >
+                      <Link
+                        href="/katasambutan"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        kata sambutan
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/strukturorganisasi"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        struktur organisasi
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/mpk"
+                        className="hover:underline hover:decoration-primary underline-offset-4 uppercase"
+                      >
+                        mpk
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/pengurus"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        pengurus harian
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/sekbid"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        seksi bidang
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div>
-                <h2 className="mb-6 text-sm font-semibold text-white uppercase  ">
-                  Home
-                </h2>
-                <ul className="text-card dark:text-desc font-medium space-y-4">
-                  <li >
-                    <Link
-                      href="/tentang"
-                      className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
-                    >
-                      tentang
-                    </Link>
-                  </li>
-                  <li >
-                    <Link href="https://flowbite.com/" className="hover:underline hover:decoration-primary underline-offset-4">
-                      Motto
-                    </Link>
-                  </li> 
-                </ul>
+              <div className="flex flex-col md:items-center">
+                <div className="">
+                  <h2 className="mb-6 text-sm font-semibold  uppercase text-white">
+                    lainnya
+                  </h2>
+                  <ul className="text-card dark:text-desc font-medium space-y-4">
+                    <li >
+                      <Link
+                        href="/galeri"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        galeri
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/blog"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        blog
+                      </Link>
+                    </li>
+                    <li >
+                      <Link
+                        href="/shop"
+                        className="hover:underline hover:decoration-primary underline-offset-4 capitalize"
+                      >
+                        shop
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
-            
             
             </div>
 
@@ -163,7 +176,7 @@ const Footer = () => {
           <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-card dark:text-desc sm:text-center">
-              © 2024{" "}
+              © {currentYear()} {''}
               <Link href="/sekbid3" className="hover:underline hover:decoration-primary underline-offset-4">
                 Sekbid 3 OSIS SMK Xaverius Palembang
               </Link>

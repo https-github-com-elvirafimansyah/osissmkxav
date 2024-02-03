@@ -97,7 +97,7 @@ const SekbidData = [
     koordinator: "Unknown",
     profile: "/assets/rgb.jpg",
     icon: <Sekbid4 />,
-    total_member: 3,
+    total_member: 2,
     member: [
       {
         name: "Elvira Firmansyah",
@@ -122,7 +122,7 @@ const SekbidData = [
     member: [
       {
         name: "anastasya",
-        img: "/assets/avatar/meilany.jpg",
+        img: "/assets/avatar/anastasya.jpg",
 
       },
       {

@@ -77,7 +77,7 @@ const Blog = () => {
           <div className="flex flex-col space-y-5">
             <div className="flex flex-col space-y-2">
               <h1 className="text-4xl lg:text-[40px] font-black">Blog</h1>
-              <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berikut ini adalah blog OSIS/OSISKA SMK Xaverius 2024</p>
+              <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berikut ini adalah blog OSIS/OSISKA SMK Xaverius tahun 2024</p>
             </div>
             <div>
               <input placeholder="Cari Blog" className="w-full p-3 px-4 rounded-xl bg-transparent dark:bg-secondary border text-decs focus:outline-primary  focus:border-primary focus:ring-primary"

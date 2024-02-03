@@ -23,7 +23,7 @@ const Produk = () => {
                 width={200}
                 height={200}
                 alt="Logo OSIS/OSISKA"
-                className="rounded-2xl  w-36 lg:w-44 "
+                className="rounded-2xl w-36 lg:w-44 "
               />
             </div>
             <div>
