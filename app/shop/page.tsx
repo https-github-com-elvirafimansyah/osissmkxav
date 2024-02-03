@@ -71,7 +71,7 @@ const Shop = () => {
         window.removeEventListener("scroll", scrollChat)
       }
     }
-  })
+  }, [])
 
   return (
     <Container>
