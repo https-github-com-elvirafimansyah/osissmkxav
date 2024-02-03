@@ -23,26 +23,7 @@ const Shop = () => {
   const [chat, setChat] = useState(false);
   const [input, setInput] = useState('');
   const [output, setOutput] = useState<ProdukData[]>([])
-  let isMobile = window.matchMedia("(max-width: 600px)").matches;
-  const threshold = isMobile ? 11 : 20;
 
-  
-  console.log(isMobile)
-  const scrollChat = () => {
-    if (isMobile && window.innerWidth <= 400) {
-      if (window.scrollY > 20) {
-        setChat(true);
-      } else {
-        setChat(false);
-      }
-    } else {
-      if (window.scrollY > threshold) {
-        setChat(true);
-      } else {
-        setChat(false);
-      }
-    }
-  }
 
   const filterData = (searchValue: string): void => {
     setInput(searchValue);
@@ -64,11 +45,31 @@ const Shop = () => {
     return dataValue.replace(/,00$/, '');
   }
 
-
   useEffect(() => {
-    window.addEventListener("scroll", scrollChat)
-    return () => {
+    if (typeof window !== 'undefined') {
+      let isMobile = window.matchMedia("(max-width: 600px)").matches;
+      const threshold = isMobile ? 11 : 20;
+
+      const scrollChat = () => {
+        if (isMobile && window.innerWidth <= 400) {
+          if (window.scrollY > 20) {
+            setChat(true);
+          } else {
+            setChat(false);
+          }
+        } else {
+          if (window.scrollY > threshold) {
+            setChat(true);
+          } else {
+            setChat(false);
+          }
+        }
+      }
+
       window.addEventListener("scroll", scrollChat)
+      return () => {
+        window.removeEventListener("scroll", scrollChat)
+      }
     }
   })
 
@@ -91,7 +92,7 @@ const Shop = () => {
             <h1 className="font-bold text-2xl">Kaos Sablon</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {input ? (
+              {input ? (
                 <>
                   {output.length >= 1 ? (
                     output.map((hasil, idx) => (
@@ -123,36 +124,36 @@ const Shop = () => {
                     <h1 className="text-red-500">Maaf, Pencarian anda tidak ditemukan</h1>
                   )}
                 </>
-            ) : (
-              (produk_data && produk_data.map((produk, idx) => (
-                <Link href={produk.link ? produk.link : ''} className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs p-5 relative" target="_blank" key={idx} >
-                  <div>
-                    <Image
-                      className="rounded-xl w-full h-[240px] object-cover"
-                      src={`/assets/produk/${produk.gambar}`}
-                      width={400}
-                      height={400}
-                      alt="Product"
-                    />
-                    <div className="space-y-2">
-                      <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{produk.kategori}</p>
-                      <div className="space-y-1 md:pb-[3.4rem]">
-                        <h4 className=" font-semibold line-clamp-2 text-ellipsis">{produk.title}</h4>
-                        {produk.harga !== undefined && (
-                          <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(produk.harga))}</h1>
-                        )}
+              ) : (
+                (produk_data && produk_data.map((produk, idx) => (
+                  <Link href={produk.link ? produk.link : ''} className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs p-5 relative" target="_blank" key={idx} >
+                    <div>
+                      <Image
+                        className="rounded-xl w-full h-[240px] object-cover"
+                        src={`/assets/produk/${produk.gambar}`}
+                        width={400}
+                        height={400}
+                        alt="Product"
+                      />
+                      <div className="space-y-2">
+                        <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{produk.kategori}</p>
+                        <div className="space-y-1 md:pb-[3.4rem]">
+                          <h4 className=" font-semibold line-clamp-2 text-ellipsis">{produk.title}</h4>
+                          {produk.harga !== undefined && (
+                            <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(produk.harga))}</h1>
+                          )}
+                        </div>
+                        <div className="md:absolute md:bottom-5 md:left-5 md:right-5  ">
+                          <Button variant={"default"} className="w-full" asChild size={"lg"}>
+                            <Link href={produk.link ? produk.link : ''} target="_blank">Beli Sekarang</Link>
+                          </Button>
+                        </div>
+
                       </div>
-                      <div className="md:absolute md:bottom-5 md:left-5 md:right-5  ">
-                        <Button variant={"default"} className="w-full" asChild size={"lg"}>
-                          <Link href={produk.link ? produk.link : ''} target="_blank">Beli Sekarang</Link>
-                        </Button>
-                      </div>
-                    
                     </div>
-                  </div>
-                </Link>
-              )))
-            )}
+                  </Link>
+                )))
+              )}
 
             </div>
           </div>

@@ -27,7 +27,7 @@ const Sekbid = () => {
                       </div>
                     </div>
                     <div className="md:absolute md:bottom-0 p-6 w-full">
-                      <div className="flex flex-row justify-between">
+                      <div className="flex justify-between">
                         <div className="flex space-x-2">
                           <div>
                             <Image
@@ -43,7 +43,7 @@ const Sekbid = () => {
                             <p className="text-sm text-desc font-medium">Koordinator</p>
                           </div>
                         </div>
-                        <div className="flex -space-x-1.5 rtl:space-x-reverse items-center">
+                        <div className="flex -space-x-1.5 mt-3 sm:mt-0 rtl:space-x-reverse items-center">
                           {_.member.map((anggota, id) => (
                             <div key={id}>
                               <Image
