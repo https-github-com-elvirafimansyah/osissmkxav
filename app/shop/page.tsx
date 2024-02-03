@@ -67,6 +67,7 @@ const Shop = () => {
       }
 
       window.addEventListener("scroll", scrollChat)
+      
       return () => {
         window.removeEventListener("scroll", scrollChat)
       }
