@@ -49,7 +49,7 @@ const Galeri = () => {
               <p className="text-desc text-base md:text-sm lg:text-base font-medium">Berbagai galeri foto dokumentasi kegiatan-kegiatan yang ada di SMK Xaverius Palembang</p>
             </div>
             <Button variant={"default"} className="w-fit" asChild size={"lg"} >
-              <Link href="/shop" className="flex space-x-1">
+              <Link href="https://lynk.id/shinetogether?fbclid=PAAaY8YoUmPjiMmdh5-1SEcPGYmx42cn0V_LvTnJuExu2eqourijK7KvHVkNA" target="_blank" className="flex space-x-1">
                 <span>Dokumentasi </span>  
                 <ArrowRight className="w-5 h-5 " />
               </Link>
