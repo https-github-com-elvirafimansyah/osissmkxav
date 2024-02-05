@@ -5,7 +5,7 @@ import Container from "@/components/container";
 import Image from "next/image";
 import Link from "next/link";
 import { Dot } from 'lucide-react';
-
+import NotFound from "@/components/notfound";
 import blogdata from "../../data/blog.json"
 
 interface BlogData {
@@ -120,7 +120,12 @@ const Blog = () => {
                   </div>
                 ))
               ) : (
-                <h1 className="text-red-500">Maaf, Pencarian anda tidak ditemukan</h1>
+                <NotFound
+                  title="Pencarian Tidak Ditemukan"
+                  description="Tidak ada hasil yang cocok dengan kriteria filter. Hapus filter atau hapus semua filter untuk menampilkan hasil"
+                  size="2xl"
+                  size_md="3xl"
+                />
               )}
             </>
             ) : (

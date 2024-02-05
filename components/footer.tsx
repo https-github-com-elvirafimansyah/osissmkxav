@@ -177,7 +177,7 @@ const Footer = () => {
           <div className="sm:flex sm:items-center sm:justify-between">
             <span className="text-sm text-card dark:text-desc sm:text-center">
               © {currentYear()} {''}
-              <Link href="/sekbid3" className="hover:underline hover:decoration-primary underline-offset-4">
+              <Link href="/sekbid/3" className="hover:underline hover:decoration-primary underline-offset-4">
                 Sekbid 3 OSIS SMK Xaverius Palembang
               </Link>
               . All Rights Reserved.

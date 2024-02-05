@@ -7,6 +7,7 @@ import Link from 'next/link';
 import produkdata from '../../data/produk.json';
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button"
+import NotFound from "@/components/notfound";
 
 interface ProdukData {
   id?: number;
@@ -67,7 +68,7 @@ const Shop = () => {
       }
 
       window.addEventListener("scroll", scrollChat)
-      
+
       return () => {
         window.removeEventListener("scroll", scrollChat)
       }
@@ -92,71 +93,82 @@ const Shop = () => {
           <div className="flex flex-col space-y-3">
             <h1 className="font-bold text-2xl">Kaos Sablon</h1>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"> */}
               {input ? (
                 <>
                   {output.length >= 1 ? (
-                    output.map((hasil, idx) => (
-                      <div className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs relative p-5" key={idx}>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                      {
+                        output.map((hasil, idx) => (
+                          <div className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs relative p-5" key={idx}>
+                            <Image
+                              className="rounded-xl w-full h-[240px] object-cover"
+                              src={`/assets/produk/${hasil.gambar}`}
+                              width={400}
+                              height={400}
+                              alt="Product"
+                            />
+                            <div className="space-y-2 ">
+                              <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{hasil.kategori}</p>
+                              <div className="space-y-1 md:pb-[3.4rem]">
+                                <h4 className=" font-semibold line-clamp-2 text-ellipsis">{hasil.title}</h4>
+                                {hasil.harga !== undefined && (
+                                  <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(hasil.harga))}</h1>
+                                )}
+                              </div>
+                              <div className="md:absolute md:bottom-5 md:left-5 md:right-5">
+                                <Button variant={"default"} className="w-full " asChild size={"lg"}>
+                                  <Link href={hasil.link ? hasil.link : ''} target="_blank">Beli Sekarang</Link>
+                                </Button>
+                              </div>
+                            </div>
+                          </div>
+                        ))
+                      }
+                    </div>
+                  ) : (
+                    <NotFound 
+                      title="Pencarian Tidak Ditemukan"
+                      description="Tidak ada hasil yang cocok dengan kriteria filter. Hapus filter atau hapus semua filter untuk menampilkan hasil"
+                      size="2xl"
+                      size_md="3xl"
+                    />
+                  )}
+                </>
+              ) : (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  {produk_data && produk_data.map((produk, idx) => (
+                    <Link href={produk.link ? produk.link : ''} className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs p-5 relative" target="_blank" key={idx} >
+                      <div>
                         <Image
                           className="rounded-xl w-full h-[240px] object-cover"
-                          src={`/assets/produk/${hasil.gambar}`}
+                          src={`/assets/produk/${produk.gambar}`}
                           width={400}
                           height={400}
                           alt="Product"
                         />
-                        <div className="space-y-2 ">
-                          <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{hasil.kategori}</p>
+                        <div className="space-y-2">
+                          <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{produk.kategori}</p>
                           <div className="space-y-1 md:pb-[3.4rem]">
-                            <h4 className=" font-semibold line-clamp-2 text-ellipsis">{hasil.title}</h4>
-                            {hasil.harga !== undefined && (
-                              <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(hasil.harga))}</h1>
+                            <h4 className=" font-semibold line-clamp-2 text-ellipsis">{produk.title}</h4>
+                            {produk.harga !== undefined && (
+                              <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(produk.harga))}</h1>
                             )}
                           </div>
-                          <div className="md:absolute md:bottom-5 md:left-5 md:right-5">
-                            <Button variant={"default"} className="w-full " asChild size={"lg"}>
-                              <Link href={hasil.link ? hasil.link : ''} target="_blank">Beli Sekarang</Link>
+                          <div className="md:absolute md:bottom-5 md:left-5 md:right-5  ">
+                            <Button variant={"default"} className="w-full" asChild size={"lg"}>
+                              <Link href={produk.link ? produk.link : ''} target="_blank">Beli Sekarang</Link>
                             </Button>
                           </div>
+  
                         </div>
                       </div>
-                    ))
-                  ) : (
-                    <h1 className="text-red-500">Maaf, Pencarian anda tidak ditemukan</h1>
-                  )}
-                </>
-              ) : (
-                (produk_data && produk_data.map((produk, idx) => (
-                  <Link href={produk.link ? produk.link : ''} className="bg-transparant dark:bg-secondary rounded-xl border border-1 border-decs p-5 relative" target="_blank" key={idx} >
-                    <div>
-                      <Image
-                        className="rounded-xl w-full h-[240px] object-cover"
-                        src={`/assets/produk/${produk.gambar}`}
-                        width={400}
-                        height={400}
-                        alt="Product"
-                      />
-                      <div className="space-y-2">
-                        <p className="bg-pastel text-primary w-fit uppercase py-[7.5px] px-[14px] text-sm font-semibold rounded-full mt-3">{produk.kategori}</p>
-                        <div className="space-y-1 md:pb-[3.4rem]">
-                          <h4 className=" font-semibold line-clamp-2 text-ellipsis">{produk.title}</h4>
-                          {produk.harga !== undefined && (
-                            <h1 className="text-lg font-black">{replaceFormat(RupiahFormat.format(produk.harga))}</h1>
-                          )}
-                        </div>
-                        <div className="md:absolute md:bottom-5 md:left-5 md:right-5  ">
-                          <Button variant={"default"} className="w-full" asChild size={"lg"}>
-                            <Link href={produk.link ? produk.link : ''} target="_blank">Beli Sekarang</Link>
-                          </Button>
-                        </div>
-
-                      </div>
-                    </div>
-                  </Link>
-                )))
+                    </Link>
+                  ))}
+                </div>
               )}
 
-            </div>
+            {/* </div> */}
           </div>
         </div>
         <Link

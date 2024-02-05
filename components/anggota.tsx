@@ -18,7 +18,7 @@ interface User3 {
   profile?: string;
   koordinator?: string;
   icon?: React.ReactNode;
-  total_member?: number; 
+  total_member?: number;
   member?: {
     name?: string;
     img?: string;
@@ -101,7 +101,7 @@ const Anggota: React.FC<UserListProps> = ({ data, title, description, type, data
                           <span className="text-base lg:text-lg font-extrabold italic flex justify-end ">~ Sekbid {anggota?.no}</span>
                         </div>
                       </div>
-                      <div className={`grid grid-cols-1 md:grid-cols-${anggota?.total_member ? anggota?.total_member > 2 ? "3": "2" : "2"} gap-4`}>
+                      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-${anggota?.total_member && anggota.total_member > 2 ? 3 : 2} gap-4`}>
                         {/* anggota */}
                         {anggota?.member?.map((user, idx) => (
                           <div className={`border border-1 border-decs p-5 lg:p-6 rounded-xl ${bg === "normal" ? "bg-transparent" : "bg-white "} dark:bg-secondary`} key={idx}>
@@ -126,9 +126,7 @@ const Anggota: React.FC<UserListProps> = ({ data, title, description, type, data
                     </div>
                   ))}
                 </>
-                : type === "4" ?
-                  <div>type 4</div>
-                  : <div>type 5</div>
+                : null
           }
         </div>
       </Container>
